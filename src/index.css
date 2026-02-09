@@ -2,83 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap');
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 222 47% 11%;
+    --background: 220 16% 96%;
+    --foreground: 225 25% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 225 25% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 225 25% 12%;
 
-    --primary: 222 60% 16%;
+    --primary: 225 45% 14%;
     --primary-foreground: 45 100% 96%;
 
-    --secondary: 215 25% 93%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 225 25% 12%;
 
-    --muted: 215 20% 95%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 10% 46%;
 
-    --accent: 43 80% 46%;
-    --accent-foreground: 222 60% 10%;
+    --accent: 42 82% 52%;
+    --accent-foreground: 225 45% 10%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 56%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214 20% 90%;
-    --input: 214 20% 90%;
-    --ring: 43 80% 46%;
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 42 82% 52%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
 
-    --sidebar-background: 222 60% 12%;
-    --sidebar-foreground: 210 40% 92%;
-    --sidebar-primary: 43 80% 46%;
-    --sidebar-primary-foreground: 222 60% 10%;
-    --sidebar-accent: 222 50% 18%;
-    --sidebar-accent-foreground: 210 40% 92%;
-    --sidebar-border: 222 40% 20%;
-    --sidebar-ring: 43 80% 46%;
+    --sidebar-background: 225 45% 10%;
+    --sidebar-foreground: 220 20% 88%;
+    --sidebar-primary: 42 82% 52%;
+    --sidebar-primary-foreground: 225 45% 10%;
+    --sidebar-accent: 225 35% 16%;
+    --sidebar-accent-foreground: 220 20% 88%;
+    --sidebar-border: 225 30% 18%;
+    --sidebar-ring: 42 82% 52%;
 
     /* Custom tokens */
-    --gold: 43 80% 46%;
-    --gold-light: 43 80% 60%;
-    --gold-dark: 43 80% 36%;
-    --navy: 222 60% 16%;
-    --navy-light: 222 40% 25%;
-    --navy-dark: 222 60% 10%;
-    --success: 152 60% 40%;
+    --gold: 42 82% 52%;
+    --gold-light: 42 75% 62%;
+    --gold-dark: 42 85% 40%;
+    --navy: 225 45% 14%;
+    --navy-light: 225 30% 24%;
+    --navy-dark: 225 50% 8%;
+    --success: 160 60% 42%;
     --success-foreground: 0 0% 100%;
 
-    --font-display: 'Playfair Display', serif;
+    --font-display: 'Sora', sans-serif;
     --font-body: 'DM Sans', sans-serif;
   }
 
   .dark {
-    --background: 222 60% 6%;
-    --foreground: 210 40% 95%;
-    --card: 222 50% 10%;
-    --card-foreground: 210 40% 95%;
-    --popover: 222 50% 10%;
-    --popover-foreground: 210 40% 95%;
-    --primary: 43 80% 46%;
-    --primary-foreground: 222 60% 10%;
-    --secondary: 222 40% 16%;
-    --secondary-foreground: 210 40% 95%;
-    --muted: 222 40% 14%;
-    --muted-foreground: 215 16% 60%;
-    --accent: 43 80% 46%;
-    --accent-foreground: 222 60% 10%;
+    --background: 225 50% 5%;
+    --foreground: 220 20% 94%;
+    --card: 225 40% 8%;
+    --card-foreground: 220 20% 94%;
+    --popover: 225 40% 8%;
+    --popover-foreground: 220 20% 94%;
+    --primary: 42 82% 52%;
+    --primary-foreground: 225 45% 8%;
+    --secondary: 225 30% 14%;
+    --secondary-foreground: 220 20% 94%;
+    --muted: 225 30% 12%;
+    --muted-foreground: 220 12% 58%;
+    --accent: 42 82% 52%;
+    --accent-foreground: 225 45% 8%;
     --destructive: 0 62% 30%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 222 30% 18%;
-    --input: 222 30% 18%;
-    --ring: 43 80% 46%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 225 25% 16%;
+    --input: 225 25% 16%;
+    --ring: 42 82% 52%;
   }
 }
 
@@ -88,58 +88,95 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
 
 @layer utilities {
   .gradient-gold {
-    background: linear-gradient(135deg, hsl(43 80% 46%), hsl(43 80% 60%), hsl(38 90% 50%));
+    background: linear-gradient(135deg, hsl(42 82% 52%), hsl(38 88% 58%), hsl(35 90% 48%));
   }
 
   .gradient-navy {
-    background: linear-gradient(135deg, hsl(222 60% 10%), hsl(222 60% 16%), hsl(222 40% 25%));
+    background: linear-gradient(145deg, hsl(225 50% 8%), hsl(225 45% 14%), hsl(225 35% 18%));
   }
 
   .gradient-hero {
-    background: linear-gradient(160deg, hsl(222 60% 10%) 0%, hsl(222 60% 16%) 40%, hsl(222 40% 22%) 100%);
+    background: linear-gradient(160deg, hsl(225 50% 6%) 0%, hsl(225 45% 12%) 50%, hsl(230 35% 18%) 100%);
+  }
+
+  .gradient-mesh {
+    background:
+      radial-gradient(ellipse at 20% 50%, hsl(42 82% 52% / 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, hsl(225 45% 30% / 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 60% 80%, hsl(42 82% 52% / 0.05) 0%, transparent 50%);
   }
 
   .text-gradient-gold {
-    background: linear-gradient(135deg, hsl(43 80% 46%), hsl(43 80% 60%));
+    background: linear-gradient(135deg, hsl(42 82% 52%), hsl(38 75% 62%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .glass-card {
-    background: hsl(0 0% 100% / 0.08);
-    backdrop-filter: blur(12px);
-    border: 1px solid hsl(0 0% 100% / 0.12);
+    background: hsl(0 0% 100% / 0.06);
+    backdrop-filter: blur(16px) saturate(1.4);
+    border: 1px solid hsl(0 0% 100% / 0.1);
+  }
+
+  .glass-card-light {
+    background: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(16px) saturate(1.4);
+    border: 1px solid hsl(0 0% 100% / 0.8);
+    box-shadow: 0 1px 3px hsl(225 30% 10% / 0.04), 0 8px 32px hsl(225 30% 10% / 0.06);
+  }
+
+  .modern-shadow {
+    box-shadow: 0 1px 2px hsl(225 30% 10% / 0.04), 0 4px 16px hsl(225 30% 10% / 0.06);
+  }
+
+  .modern-shadow-lg {
+    box-shadow: 0 2px 4px hsl(225 30% 10% / 0.04), 0 12px 40px hsl(225 30% 10% / 0.08);
   }
 
   .number-ball {
-    @apply inline-flex items-center justify-center w-12 h-12 rounded-full font-bold text-lg;
-    background: linear-gradient(135deg, hsl(43 80% 46%), hsl(38 90% 50%));
-    color: hsl(222 60% 10%);
-    box-shadow: 0 4px 15px hsl(43 80% 46% / 0.3);
+    @apply inline-flex items-center justify-center w-12 h-12 rounded-2xl font-bold text-lg;
+    background: linear-gradient(135deg, hsl(42 82% 52%), hsl(35 90% 48%));
+    color: hsl(225 50% 8%);
+    box-shadow: 0 4px 12px hsl(42 82% 52% / 0.25), 0 1px 2px hsl(42 82% 52% / 0.1);
   }
 
   .number-ball-sm {
-    @apply inline-flex items-center justify-center w-9 h-9 rounded-full font-bold text-sm;
-    background: linear-gradient(135deg, hsl(43 80% 46%), hsl(38 90% 50%));
-    color: hsl(222 60% 10%);
-    box-shadow: 0 2px 8px hsl(43 80% 46% / 0.25);
+    @apply inline-flex items-center justify-center w-9 h-9 rounded-xl font-bold text-sm;
+    background: linear-gradient(135deg, hsl(42 82% 52%), hsl(35 90% 48%));
+    color: hsl(225 50% 8%);
+    box-shadow: 0 2px 8px hsl(42 82% 52% / 0.2);
   }
 
   .number-ball-consumed {
-    @apply inline-flex items-center justify-center w-12 h-12 rounded-full font-bold text-lg;
-    background: hsl(215 20% 85%);
-    color: hsl(215 16% 47%);
+    @apply inline-flex items-center justify-center w-12 h-12 rounded-2xl font-bold text-lg;
+    background: hsl(220 14% 92%);
+    color: hsl(220 10% 46%);
+  }
+
+  .grain {
+    position: relative;
+  }
+
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.4;
+    mix-blend-mode: overlay;
   }
 }
